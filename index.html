@@ -5,69 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeevPC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><style>
-        body{
-            background-color: rgb(43, 43, 43);
-        }
-        .details{
-            padding-left: 29vw;
-            padding-top: 35vh;
-            display: flex;
-            color: white;
-            font-family: "Poppins", sans-serif;
-            margin-left: 5vw;
-        }
-        img{
-            width: 50px;
-            height: 50%;
-            margin-top: 3.1vh;
-            margin-left: 2vw;
-        }
-        .buttons{
-            padding-left: 32vw;
-        }
-        button{
-            height: 8vh;
-            width: 10vw;
-            border-radius: 50px;
-            border: 2px solid white;
-            transform: translateX(50px);
-            margin-top: 5.4vh;
-            font-family: "Poppins" , sans-serif;
-            color: white;
-            background-color: black;
-            cursor: pointer;
-        }
-    </style>    
 </head>
 <body>
-    <div class="details">
-        <img src="https://cdn-icons-png.flaticon.com/512/4703/4703650.png" alt="">
-        <h1>Destroyer</h1>
-        <img id="dot" style="width: 30px; transform: translateY(1.9vh);" src="https://www.freepnglogos.com/uploads/dot-png/dot-hole-cavendish-golf-club-award-winning-golf-club-6.png">
-    </div>
-    <div class="buttons">
-        <button id="wol">Send On Signal</button>
-        <a href="http://[2405:201:400a:a16a:da32:e3ff:fe43:3c56]:8000/NoVnc.html?host=[2405:201:400a:a16a:da32:e3ff:fe43:3c56]&port=8080"><button style="margin-left: 50px;" id="con">Connect</button></a>
-    </div>
 </body>
 <script>
-    const ws = new WebSocket("ws://[2405:201:400a:a16a:da32:e3ff:fe43:3c56]:7000");
-    ws.addEventListener("open" , ()=>{
-        console.log("Connected To Server");
-    });
-    document.getElementById("wol").onclick = ()=>{
-        ws.send("wol");
-    }
-    const ws2 = new WebSocket("ws://[2405:201:400a:a16a:182e:b4b5:8b5c:56ab]:7000");
-    ws2.addEventListener("open" , ()=>{
-        document.getElementById("dot").src = "https://static.vecteezy.com/system/resources/previews/009/394/203/non_2x/button-pin-clipart-design-illustration-free-png.png";
-        
-    });
-    ws2.addEventListener("close" , ()=>{
-        document.getElementById("dot").src = "https://www.freepnglogos.com/uploads/dot-png/dot-hole-cavendish-golf-club-award-winning-golf-club-6.png";
-    });
+   location.replace("http://[2405:201:400a:a16a:da32:e3ff:fe43:3c56]:8000/NoVnc.html?host=[2405:201:400a:a16a:da32:e3ff:fe43:3c56]&port=8080");
 </script>
 </html>
